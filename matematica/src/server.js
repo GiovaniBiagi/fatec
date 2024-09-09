@@ -3,6 +3,7 @@ import { interseccao } from "./algorithms/interseccao.js";
 import { classficacao } from "./algorithms/classficacao.js";
 import { uniao } from "./algorithms/uniao.js";
 import { diferenca } from "./algorithms/diferenca.js";
+import { partes } from "./algorithms/partes.js";
 
 const app = express();
 
@@ -38,6 +39,18 @@ app.post("/diferenca", (request, response) => {
   const diff = diferenca(conjuntoA, conjuntoB);
 
   return response.json(diff);
+});
+
+app.post("/partes", (request, response) => {
+  const { conjunto } = request.body;
+  console.log();
+  if (!Array.isArray(conjunto) || conjunto.length < 0) {
+    return response.status(400).json({ error: "Conjunto vazio" });
+  }
+
+  const conjuntoDasPartes = partes(conjunto);
+
+  return response.json(conjuntoDasPartes);
 });
 
 app.listen(3000, () => {

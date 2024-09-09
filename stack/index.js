@@ -6,7 +6,7 @@
  * Graziella
  */
 
-class Stack {
+export class Stack {
   constructor() {
     this.items = [];
   }
@@ -36,7 +36,7 @@ class Stack {
   }
 }
 
-function decimalParaBinario(decimalNumber) {
+export function decimalParaBinario(decimalNumber) {
   const stack = new Stack();
   let number = decimalNumber;
   let binaryString = "";
@@ -54,8 +54,8 @@ function decimalParaBinario(decimalNumber) {
   return binaryString;
 }
 
-console.log(decimalParaBinario(10)); // 1010
-console.log(decimalParaBinario(233)); // 11101001
-console.log(decimalParaBinario(1000)); // 1111101000
-console.log(decimalParaBinario(0)); // ""
-console.log(decimalParaBinario(1)); // "1"
+// console.log(decimalParaBinario(10)); // 1010
+// console.log(decimalParaBinario(233)); // 11101001
+// console.log(decimalParaBinario(1000)); // 1111101000
+// console.log(decimalParaBinario(0)); // ""
+// console.log(decimalParaBinario(1)); // "1"

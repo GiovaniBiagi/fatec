@@ -8,4 +8,6 @@ export function classficacao(conjunto) {
       }
     }
   }
+
+  return conjunto;
 }
