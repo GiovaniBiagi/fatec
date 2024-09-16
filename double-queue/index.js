@@ -1,3 +1,11 @@
+/**
+ * Grupo:
+ *
+ * Giovani
+ * Graziella
+ * Hosana
+ */
+
 export class DoubleQueue {
   constructor() {
     this.queue = [];
@@ -12,10 +20,18 @@ export class DoubleQueue {
   }
 
   removeFront() {
+    if (this.isEmpty()) {
+      return;
+    }
+
     return this.queue.shift();
   }
 
   removeBack() {
+    if (this.isEmpty()) {
+      return;
+    }
+
     return this.queue.pop();
   }
 
@@ -24,6 +40,10 @@ export class DoubleQueue {
   }
 
   peekBack() {
+    if (this.isEmpty()) {
+      return;
+    }
+
     return this.queue[this.queue.length - 1];
   }
 

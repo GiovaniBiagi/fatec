@@ -1,3 +1,11 @@
+/**
+ * Grupo:
+ *
+ * Giovani
+ * Graziella
+ * Hosana
+ */
+
 import { Stack } from "../stack/index.js";
 
 export class Queue {
@@ -45,16 +53,16 @@ export const invertedQueue = () => {
   return queue;
 };
 
-// console.log("INVERTED QUEUE", invertedQueue());
+console.log("INVERTED QUEUE", invertedQueue());
 
-// const queue = new Queue();
-// queue.enqueue("Giovani");
-// queue.enqueue("Hosana");
-// queue.enqueue("Graziella");
+const queue = new Queue();
+queue.enqueue("Giovani");
+queue.enqueue("Hosana");
+queue.enqueue("Graziella");
 
-// console.log(queue.size()); // 3
-// console.log(queue.peek()); // Giovani
-// console.log(queue.dequeue()); // Giovani
-// console.log(queue.dequeue()); // Hosana
-// console.log(queue.dequeue()); // Graziella
-// console.log(queue.isEmpty()); // true
+console.log(queue.size()); // 3
+console.log(queue.peek()); // Giovani
+console.log(queue.dequeue()); // Giovani
+console.log(queue.dequeue()); // Hosana
+console.log(queue.dequeue()); // Graziella
+console.log(queue.isEmpty()); // true
